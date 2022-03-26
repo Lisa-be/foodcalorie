@@ -6,7 +6,7 @@ import bs4
 import csv
 from gevent.queue import Queue
 
-csv_file = open('boohee.csv', 'w', newline='')
+csv_file = open('boohee.csv', 'w', encoding='utf-8-sig', newline='')
 writer = csv.writer(csv_file)
 writer.writerow(['食物', '热量', '链接'])
 
