@@ -12,13 +12,13 @@ writer.writerow(['食物', '热量', '链接'])
 
 work = Queue()
 url_1 = 'http://www.boohee.com/food/group/{type}?page={page}'
-for x in range(1, 4):
-    for y in range(1, 4):
+for x in range(1, 11):
+    for y in range(1, 11):
         real_url = url_1.format(type=x, page=y)
         work.put_nowait(real_url) #
 
 url_2 = 'http://www.boohee.com/food/view_menu?page={page}'
-for x in range(1, 4):
+for x in range(1, 11):
     real_url = url_2.format(page=x)
     work.put_nowait(real_url)
 
